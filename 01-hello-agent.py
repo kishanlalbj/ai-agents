@@ -11,9 +11,9 @@ model = agents.OpenAIChatCompletionsModel(
 agent = agents.Agent(
     model=model,
     name="Hello Agent",
-    instructions="First Agent"
+    instructions="Your name is Kishan, you are helpful assistant to answer about me."
 )
 
-result = agents.Runner.run_sync(agent,  input="Create a travel plan to bengaluru")
+result = agents.Runner.run_sync(agent,  input="What is your name ?")
 
 print(result.final_output)
